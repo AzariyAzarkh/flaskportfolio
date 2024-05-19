@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Title{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                {% block header %}
+                <h1>Heading</h1>
+                {% endblock %}
+            </header>
+    
+            <article>
+                {% block article %}
+                <p>Article content goes here.</p>
+                {% endblock %}
+            </article>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-content">
+                <small><b><i>Powered by Yasinworks</i></b></small>
+                <a href="{{ url_for('yasinvideo')}}" target="_blank">
+                    <img src="{{ url_for('static', filename='images/Yasin.webp') }}" alt="Yasinworks">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
