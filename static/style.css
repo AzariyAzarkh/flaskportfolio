@@ -1,20 +1,31 @@
 #page-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
 #content-wrap {
     flex: 1;
-    padding-bottom: 75px; /* Adjusted for footer height */
+    padding-bottom: 75px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 header {
+    display: block;
     text-align: center;
+    color: black;
     background-color: gray;
     border: 3px solid black;
-    color: black;
-    padding: 10px;
+    border-radius: 40px;
+    box-sizing: content-box;
     text-shadow: 
         1px 1px 0 white, 
         -1px -1px 0 white,
@@ -24,6 +35,20 @@ header {
         -1px 0 0 white,
         0 1px 0 white, 
         0 -1px 0 white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 75px;
+}
+
+header h1 {
+    font-size: clamp(16px, 4vw, 48px); /* Minimum 16px, fluid between, maximum 48px */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.pattern-left,
+.pattern-right {
+    width: 700px;
+    height: 150px;
 }
 
 article {
@@ -31,24 +56,24 @@ article {
 }
 
 #footer {
-    background-color: #d3d3d3;
-    color: black;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 75px; /* Adjusted for image height */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px; /* Margin around the footer content */
-    box-sizing: border-box; /* Ensures padding does not affect height */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    background-color: #d3d3d3;
+    color: black;
+    box-sizing: border-box;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
+    width: 100%;
 }
 
 .footer-content small {
@@ -58,5 +83,5 @@ article {
 .footer-content img {
     width: 60px;
     height: 60px;
-    object-fit: cover; /* Ensures image fits within the specified dimensions */
+    object-fit: cover;
 }

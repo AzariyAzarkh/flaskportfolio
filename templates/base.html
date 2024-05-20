@@ -10,11 +10,15 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <header>
-                {% block header %}
-                <h1>Heading</h1>
-                {% endblock %}
-            </header>
+            <div class="header-container">
+                <img src="{{ url_for('static', filename='images/pattern_r.png') }}" alt="Left Pattern" class="pattern-left">
+                <header>
+                    {% block header %}
+                    <h1 id="header-text">Heading</h1>
+                    {% endblock %}
+                </header>
+                <img src="{{ url_for('static', filename='images/pattern_l.png') }}" alt="Right Pattern" class="pattern-right">
+            </div>
     
             <article>
                 {% block article %}
