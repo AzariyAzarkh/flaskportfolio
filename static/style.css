@@ -26,14 +26,14 @@ header {
     border: 3px solid black;
     border-radius: 40px;
     box-sizing: content-box;
-    text-shadow: 
-        1px 1px 0 white, 
+    text-shadow:
+        1px 1px 0 white,
         -1px -1px 0 white,
         1px -1px 0 white,
         -1px 1px 0 white,
-        1px 0 0 white, 
+        1px 0 0 white,
         -1px 0 0 white,
-        0 1px 0 white, 
+        0 1px 0 white,
         0 -1px 0 white;
     margin-left: 10px;
     margin-right: 10px;
@@ -41,8 +41,10 @@ header {
 }
 
 header h1 {
-    font-size: clamp(16px, 4vw, 48px); /* Minimum 16px, fluid between, maximum 48px */
-    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: clamp(16px, 4vw, 48px);
+    /* Minimum 16px, fluid between, maximum 48px */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
 }
 
 .pattern-left,
@@ -84,4 +86,39 @@ article {
     width: 60px;
     height: 60px;
     object-fit: cover;
+}
+
+#col1,
+#col2 {
+    text-align: center;
+    color: black;
+    background-color: rgb(88, 88, 88);
+    color: #ffffff;
+}
+
+#col2 {
+    background-color: rgb(97, 97, 97);
+}
+
+.container1 {
+    width: 99.1%;
+}
+
+.custom-column {
+    float: left;
+    padding: 10px;
+}
+
+.custom-column.side {
+    width: 25%;
+}
+
+.custom-column.middle {
+    width: 50%;
+}
+
+.custom-row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
